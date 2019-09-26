@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            
+           body{
+
+               background-image: url(eyeem-127573546.jpg);
+               background-attachment: fixed;
+               background-repeat: no-repeat;
+               background-size: cover;
+               
+        }
+             #cal{
+                   background-color: crimson;
+                  text-align: center;
+                  border: 2px solid burlywood;
+                  margin-left: 500px;
+                  margin-top: 100px;
+                  
+                  padding-left: 10px;
+                  
+                  
+             }
+             .b{
+
+                 background-color: teal;
+                 width: 80px;
+                 height: 80px;
+             }
+              input[type="button"]{
+                        width: 80px;
+                        height:80px;
+                        background-color: steelblue;
+
+              }
+              
+              
+              .c{
+
+                  height: 80px;
+              }
+              #display{
+
+                  height: 50px;
+                  width: 200px;
+                  background-color: whitesmoke;
+              }
+        
+        
+    </style>
+</head>
+<body >
+    <h1 style="text-align: center">BASIC CALCULATOR</h1>
+    <form name="calculator">
+            
+              
+
+         <table id="cal" >
+                <div>
+             <tr class="a">
+                 <td  class="c" colspan="4"><input type="button" name="display" id="display" disabled></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+    
+             </tr>
+             <tr>
+                    <td class="b"><input type="button" name="one" value="1" onclick="calculator.display.value +='1'"></td>
+                    <td class="b"><input type="button" name="two" value="2" onclick="calculator.display.value +='2'"></td>
+                    <td class="b"><input type="button" name="three" value="3" onclick="calculator.display.value +='3'"></td>
+                    <td class="b"><input type="button" name="add" value="+" onclick="calculator.display.value +='+'"></td>
+                </tr>
+                <tr>
+                        <td class="b"><input type="button" name="four" value="4" onclick="calculator.display.value +='4'"></td>
+                        <td class="b"><input type="button" name="five" value="5" onclick="calculator.display.value +='5'"></td>
+                        <td class="b"><input type="button" name="six" value="6" onclick="calculator.display.value +='6'"></td>
+                        <td class="b"><input type="button" name="mul" value="*" onclick="calculator.display.value +='*'"></td>
+                    </tr>
+                    <tr>
+                            <td class="b"><input type="button" name="seven" value="7" onclick="calculator.display.value +='7'"></td>
+                            <td class="b"><input type="button" name="eight" value="8" onclick="calculator.display.value +='8'"></td>
+                            <td class="b"><input type="button" name="nine" value="9" onclick="calculator.display.value +='9'"></td>
+                            <td class="b"><input type="button" name="sub" value="-" onclick="calculator.display.value +='-'"></td>
+                        </tr>
+                        
+                            <tr>
+                                <td class="b"><input type="button" name="/" value="/" onclick="calculator.display.value +='/'"></td>
+                                <td class="b"><input type="button" name="zero" value="0" onclick="calculator.display.value +='0'"></td>
+                                <td class="b"><input type="button" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)"></td>
+                                <td class="b"><input type="button" name="clear"  value="clear" onclick="calculator.display.value=''"></td>
+                            </tr>
+                        </div>
+                        </table>
+
+        
+    
+    </form>
+    <ul>
+    <h3>How to make basic calculator by using html,css,javascript?</h3>
+    <li><p>First take one form tag give it some name="calculator" </p></li>
+    <li><p>we need to take one table inside the form</p></li>
+    <li><p>The table contains 4 rows each row contains 4 columns, Except the first row(1st row contains only one column)</p></li>
+    <li><p>1st row is for displaying the result</p></li>
+    <li><p>Remaining rows are for Buttons inside columns like numbers and symbols like 1,2,3...+,*,- ...so on</p></li>
+    <li><p>1st row inside coloumn:we take input as text box....type="text"</p></li>
+    <li><p>after that each coloumn take input as button ....type="button"....give some name="one"...and also give some value </p></li>
+        <li><p>For passing inputs into your display we take onclick(it is inbuilt method in J.S)  </p></li>
+     <h2>How to give onclick method?</h2>
+     <li> <p>Inside input tag onclick="form name.textbox name.value += 'number or symbol'"</p></li>
+        <li> <p>"+=" is perform concatenation operation with before values present inside yor display or text box </p></li>
+            <li><p>eg:"input type="button" name="one" value="1" onclick="calculator.display.value +='1'"</p></li>
+                <li><p>we can give Each number and symbol inputs like above one.... </p></li>
+                    <li> <p>At equals symbol it can perform some operation like add,sub,mul,div....for that we can use method called eval()</p>
+                        <li> <p>eval() method is inbuilt in java script </p></li>
+                              <h3>How to give eval() method?</h3>
+                                <li><p>eval(form name.textbox name.value)</p></li>
+                                    <li>  <p>"input type="button" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)"</p></li>
+                                        <li>  <p>For Clear screen:  "input type="button" name="clear"  value="clear" onclick="calculator.display.value=''""</p></li>
+        
+     <p></p>
+    </ul>
+</body>
+
+</html>
